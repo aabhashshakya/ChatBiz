@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VIEW.FRAGMENTS.MAIN.BASE.FRAGMENT_IN_VIEWPAGER.ChatListFragment"
+
+    >
+
+
+    <com.google.android.material.card.MaterialCardView
+        style="@style/CardViewBackgroundStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="0dp"
+
+        >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/chat_list_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+
+            tools:listitem="@layout/adapter_chat_list" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/chatlist_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:drawablePadding="3dp"
+        android:gravity="center"
+        android:text="@string/your_conversations_appear_here"
+        android:textSize="13sp"
+        app:drawableStartCompat="@drawable/ic_baseline_emoji_emotions_24" />
+
+
+</RelativeLayout>

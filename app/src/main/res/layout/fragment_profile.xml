@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".VIEW.FRAGMENTS.MAIN.BASE.FRAGMENT_IN_VIEWPAGER.ProfileFragment">
+
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/profile_card_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:cardCornerRadius="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/profile_cover_pic"
+                    android:layout_width="match_parent"
+                    android:layout_height="260dp"
+                    android:background="?selectableItemBackground"
+                    android:scaleType="centerCrop"
+                    tools:src="@drawable/login" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_alignBottom="@id/profile_cover_pic"
+                    android:background="@drawable/rectangular_gradient_270" />
+
+                <com.google.android.material.appbar.MaterialToolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@android:color/transparent"
+                    app:contentInsetLeft="0dp"
+                    app:contentInsetStart="0dp"
+                    app:contentInsetStartWithNavigation="0dp" />
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_profile_pic"
+                    style="@style/CIVStyle"
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="160dp"
+                    android:src="@drawable/ic_profile"
+                    app:civ_border_width="2dp" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/onlinestatus"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="250dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_below="@id/profile_cover_pic"
+                    android:src="#636161"
+                    android:visibility="visible"
+                    app:civ_border_color="@color/white"
+                    app:civ_border_width="1.5dp"
+
+
+                    />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_gps_indicator"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_below="@id/profile_cover_pic"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginTop="13dp"
+                    android:layout_toStartOf="@id/profile_profile_pic"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_baseline_location_off_24"
+
+                    />
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/settings_send_message"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_below="@id/profile_cover_pic"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="13dp"
+                    android:layout_toEndOf="@id/profile_profile_pic"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_message"
+                    android:elevation="5dp"
+
+                    />
+
+
+
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/profile_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/profile_profile_pic"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center_horizontal"
+                    android:maxLines="1"
+
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    tools:text="User" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/profile_bio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/profile_username"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center"
+
+                    android:textSize="20sp"
+
+                    tools:text="heyyyyyyyyyyyyy" />
+
+                <ProgressBar
+                    android:id="@+id/profile_progressBar"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:indeterminate="true"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/profile_bio"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <View
+                        android:id="@+id/divider1"
+                        style="@style/DividerStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/profile_role"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="?selectableItemBackground"
+                        android:drawablePadding="5dp"
+                        android:gravity="left|center_vertical"
+                        android:textSize="18sp"
+                        app:drawableLeftCompat="@drawable/ic_baseline_work_24"
+                        tools:ignore="RtlHardcoded"
+                        tools:text="No phone number specified." />
+
+                    <View
+                        android:id="@+id/divider2"
+                        style="@style/DividerStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/profile_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="?selectableItemBackground"
+                        android:drawablePadding="5dp"
+                        android:gravity="left|center_vertical"
+                        android:textSize="18sp"
+                        app:drawableLeftCompat="@drawable/ic_baseline_my_location_24"
+                        tools:ignore="RtlHardcoded"
+                        tools:text="No address specified." />
+
+                    <View
+                        android:id="@+id/divider3"
+                        style="@style/DividerStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+
+                        />
+
+
+                    <!-- we have used our custom map view. check out its class file -->
+                    <com.hackathon.chat_biz.VIEW.FRAGMENTS.MAIN.BASE.FRAGMENT_IN_VIEWPAGER.MyMapView
+                        android:id="@+id/profile_mapView"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="240dp" />
+
+
+                </LinearLayout>
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+    </RelativeLayout>
+</ScrollView>

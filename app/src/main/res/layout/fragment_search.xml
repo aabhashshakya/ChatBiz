@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/search_relative_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".VIEW.FRAGMENTS.MAIN.BASE.FRAGMENT_IN_VIEWPAGER.SearchFragment">
+
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/search_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="4dp"
+        app:iconifiedByDefault="false"
+        app:queryHint="Search for a person here" />
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/search_card_view"
+        style="@style/CardViewBackgroundStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/search_view"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="0dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/search_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="1dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/adapter_search"
+
+
+            />
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <ProgressBar
+        android:id="@+id/search_progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:elevation="10dp"
+        android:indeterminate="true"
+        android:visibility="visible" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/search_card_view"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:drawablePadding="3dp"
+        android:gravity="center"
+        android:text="@string/looks_like_you_have_reached_the_end_of_the_list"
+        android:textSize="13sp"
+        app:drawableStartCompat="@drawable/ic_baseline_outlet_24" />
+
+
+</RelativeLayout>

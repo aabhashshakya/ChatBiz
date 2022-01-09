@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        tools:context=".VIEW.FRAGMENTS.MAIN.BASE.FRAGMENT_IN_VIEWPAGER.SettingsFragment">
+
+
+
+
+        <com.google.android.material.card.MaterialCardView
+
+            android:id="@+id/settings_card_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:cardCornerRadius="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/settings_cover_pic"
+                    android:layout_width="match_parent"
+                    android:layout_height="210dp"
+                    android:background="?selectableItemBackground"
+                    android:scaleType="centerCrop"
+                    tools:src="@drawable/login" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_alignBottom="@id/settings_cover_pic"
+                    android:background="@drawable/rectangular_gradient_270" />
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/settings_cover_pic_edit"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_alignEnd="@id/settings_cover_pic"
+                    android:layout_alignBottom="@id/settings_cover_pic"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_baseline_edit" />
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/settings_profile_pic"
+                    style="@style/CIVStyle"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="130dp"
+                    android:src="@drawable/ic_profile"
+                    app:civ_border_width="2dp" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/settings_profile_pic_edit"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignEnd="@id/settings_profile_pic"
+                    android:layout_alignBottom="@id/settings_profile_pic"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_baseline_edit_with_background" />
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/settings_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/settings_profile_pic"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="?selectableItemBackground"
+                    android:gravity="center_horizontal"
+                    android:maxLines="1"
+                    android:paddingStart="20dp"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    app:drawableEndCompat="@drawable/ic_baseline_pen_24"
+                    tools:text="User"
+                    tools:ignore="RtlSymmetry" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/settings_bio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/settings_username"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="?selectableItemBackground"
+                    android:gravity="center"
+                    android:paddingStart="20dp"
+                    android:textSize="20sp"
+                    app:drawableEndCompat="@drawable/ic_baseline_pen_24"
+                    tools:text="heyyyyyyy"
+                    tools:ignore="RtlSymmetry" />
+
+
+                <LinearLayout
+                    android:id="@+id/settings_linear_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/settings_bio"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <View
+                        android:id="@+id/divider1"
+                        style="@style/DividerStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/settings_role"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="?selectableItemBackground"
+                        android:drawablePadding="5dp"
+                        android:gravity="left|center_vertical"
+                        android:textSize="18sp"
+                        app:drawableLeftCompat="@drawable/ic_baseline_work_24"
+                        app:drawableRightCompat="@drawable/ic_baseline_pen_24"
+                        tools:ignore="RtlHardcoded"
+                        tools:text="No phone number specified." />
+
+                    <View
+                        android:id="@+id/divider2"
+                        style="@style/DividerStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/settings_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="?selectableItemBackground"
+                        android:drawablePadding="5dp"
+                        android:gravity="left|center_vertical"
+                        android:textSize="18sp"
+                        app:drawableLeftCompat="@drawable/ic_baseline_my_location_24"
+                        tools:ignore="RtlHardcoded"
+                        tools:text="No address specified." />
+
+                    <View
+                        android:id="@+id/divider3"
+                        style="@style/DividerStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp" />
+                </LinearLayout>
+
+
+                <!-- we have used our custom map view. check out its class file -->
+                <com.hackathon.chat_biz.VIEW.FRAGMENTS.MAIN.BASE.FRAGMENT_IN_VIEWPAGER.MyMapView
+                    android:id="@+id/settings_mapView"
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp"
+                    android:layout_below="@id/settings_linear_layout"
+
+                    android:layout_marginTop="5dp"
+                    android:apiKey="AIzaSyDA4WRPGRg0WD3rDOSaVjA2_sab9sJ7DB8" />
+
+                <ProgressBar
+                    android:id="@+id/settings_progressBar"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:indeterminate="true"
+                    android:visibility="visible" />
+
+                <ProgressBar
+                    android:id="@+id/settings_progressBar_profile_pic"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="185dp"
+                    android:indeterminate="true"
+                    android:visibility="visible" />
+
+                <ProgressBar
+                    android:id="@+id/settings_progressBar_coverpic"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="50dp"
+                    android:indeterminate="true"
+                    android:visibility="visible" />
+
+
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+    </RelativeLayout>
+</ScrollView>

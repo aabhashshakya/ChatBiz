@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/adapter_cardview"
+    style="@style/CardViewForegroundStyle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="1dp"
+    app:cardCornerRadius="0dp"
+    app:cardElevation="1dp"
+
+
+    >
+
+    <RelativeLayout
+        android:id="@+id/relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+
+        android:padding="8dp">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_profile"
+
+            />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="12dp"
+            android:layout_toEndOf="@id/profile_image"
+
+
+            android:textSize="19sp" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/onlinestatus"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_below="@id/username"
+            android:layout_toStartOf="@id/username"
+            android:src="#05df29"
+            android:visibility="visible"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="1.5dp"
+
+
+            />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/offlinestatus"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_below="@id/username"
+            android:layout_toStartOf="@id/username"
+            android:src="@color/offline"
+            android:visibility="visible"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="1.5dp"
+
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/bio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/username"
+            android:layout_marginHorizontal="10dp"
+            android:layout_toEndOf="@id/profile_image"
+            android:ellipsize="end"
+            android:maxLines="1"
+            tools:text="Yo what is up" />
+
+    </RelativeLayout>
+
+
+</com.google.android.material.card.MaterialCardView>
+
+
+

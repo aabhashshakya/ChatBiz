@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "633714434990",
+    "project_id": "chat-biz-23716",
+    "storage_bucket": "chat-biz-23716.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:633714434990:android:524c86391032b47f6fde3f",
+        "android_client_info": {
+          "package_name": "com.hackathon.chat_biz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "633714434990-46i1luqkq3dno78cc0vjq6i4u4fa0tps.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAa3ZPGv8dILvE0qnMAwH1Z4mEv2SLC9PY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "633714434990-46i1luqkq3dno78cc0vjq6i4u4fa0tps.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:theme="@style/Theme.FirebaseChatApp"
+    tools:context=".VIEW.FRAGMENTS.MAIN.BASE.FRAGMENT_IN_VIEWPAGER.MessageFragment">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/message_app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        >
+
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/message_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp"
+            app:contentInsetStartWithNavigation="0dp">
+
+
+            <RelativeLayout
+                android:id="@+id/message_relative_layout_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/message_receiver_profile_pic"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:background="?selectableItemBackgroundBorderless"
+
+                    android:src="@drawable/ic_profile" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/message_receiver_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="11dp"
+                    android:layout_toEndOf="@+id/message_receiver_profile_pic"
+                    android:maxLines="1"
+
+
+                    android:textSize="19sp"
+                    tools:text="Aabhash Shakya" />
+
+
+            </RelativeLayout>
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/message_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/message_relative_layout_bottom"
+        android:layout_below="@id/message_app_bar_layout"
+
+
+        tools:listitem="@layout/adapter_right_message_holder"
+
+        />
+
+    <RelativeLayout
+        android:id="@+id/message_relative_layout_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="10dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/message_attach_file"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_attach_file"
+
+            />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/message_edit_text"
+            style="@style/MyEditTextStyleForAlertDialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="7dp"
+            android:layout_toStartOf="@id/message_send"
+            android:layout_toEndOf="@id/message_attach_file"
+            android:background="@android:color/transparent"
+            android:hint="@string/write_your_message_here"
+            android:textSize="20sp" />
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/message_send"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_action_send"
+
+            />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

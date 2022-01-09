@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VIEW.FRAGMENTS.AUTHENTICATION.WelcomeFragment"
+
+    >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/welcome"
+        android:contentDescription="@string/welcome"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:padding="25dp">
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/welcome_welcome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="@string/welcome_string"
+            android:textColor="@color/white"
+            android:textSize="55sp"
+
+            android:textStyle="italic" />
+
+        <com.google.android.material.button.MaterialButton
+
+            android:id="@+id/welcome_login"
+            style="@style/MyButtonStyleForAuthScreen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+
+            android:text="@string/login"
+
+
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/welcome_register"
+            style="@style/MyButtonStyleForAuthScreen"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="@string/register"
+
+            />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

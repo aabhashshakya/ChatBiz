@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Confab</string>
+
+
+    <string name="log_out">Log Out</string>
+    <string name="welcome">welcome</string>
+    <string name="welcome_string">welcome</string>
+    <string name="login">Login</string>
+    <string name="register">register</string>
+    <string name="log_in_screen">log_in_screen</string>
+    <string name="e_mail">E-mail</string>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
+
+    <string name="sign_up">Sign Up</string>
+    <string name="image_message_sent">image_message_sent</string>
+    <string name="your_conversations_appear_here">Your conversations appear here</string>
+    <string name="looks_like_you_have_reached_the_end_of_the_list">Looks like you have reached the end of the list</string>
+    <string name="write_your_message_here">Write your message here…</string>
+    <string name="invalid_credentials">Invalid credentials. Please try again.</string>
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyAQi0fhcrQkmpUZBucytXuAJnhkpqJDpoU</string>
+
+</resources>

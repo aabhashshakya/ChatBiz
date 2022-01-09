@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    style="@style/CardViewForegroundStyle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="1dp"
+    app:cardCornerRadius="0dp"
+
+
+    app:cardElevation="1dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+        android:padding="8dp">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_profile" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@id/profile_image"
+            android:textSize="19sp"
+            tools:text="Aabhash Shakya" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/onlinestatus"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_below="@id/username"
+            android:layout_toStartOf="@id/username"
+            android:src="#05df29"
+            android:visibility="visible"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="1.5dp"
+
+
+            />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/offlinestatus"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_below="@id/username"
+            android:layout_toStartOf="@id/username"
+            android:src="@color/offline"
+            android:visibility="visible"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="1.5dp"
+
+
+            />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/last_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/username"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="3dp"
+            android:layout_toEndOf="@id/profile_image"
+            android:ellipsize="end"
+            android:maxLines="1"
+
+            tools:text="This was the last messagedsssssssssssssssssss sent" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="5dp"
+            app:cardCornerRadius="10dp"
+
+            >
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/unread_messages"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/red"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingStart="3dp"
+                android:paddingEnd="3.5dp"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+
+                android:visibility="gone"
+                tools:text="88"
+                tools:visibility="visible" />
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+    </RelativeLayout>
+
+
+</com.google.android.material.card.MaterialCardView>
+
+
+

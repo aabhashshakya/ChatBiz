@@ -1,0 +1,9 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+
+            <solid android:color="#14000000" />
+        </shape>
+    </item>
+    <item android:drawable="@drawable/ic_baseline_edit" />
+</layer-list>

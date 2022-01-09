@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentStart="true"
+    android:layout_marginStart="10dp"
+
+
+    android:layout_marginTop="3dp"
+    android:layout_marginEnd="100dp"
+    android:layout_marginBottom="3dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/left_receiver_profile_pic"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_profile"
+
+        />
+
+    <LinearLayout
+        android:id="@+id/left_linear_layout"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_toEndOf="@id/left_receiver_profile_pic"
+
+        android:orientation="vertical">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/left_message_card_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="4dp"
+            app:cardCornerRadius="11dp">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/left_message_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="@color/receivedmessagecolor"
+                android:padding="7dp"
+                android:textColor="@color/white"
+
+                android:textSize="19.5sp"
+                tools:text="jhhhsdddddddddddddddsdddddsdsdj" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/left_image_card_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="3dp"
+
+            app:cardCornerRadius="11dp"
+
+            >
+
+            <ImageView
+                android:id="@+id/left_image_view"
+                android:layout_width="130dp"
+                android:layout_height="200dp"
+                android:background="?selectableItemBackground"
+                android:scaleType="centerCrop"
+                tools:src="@color/red"
+
+                />
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
+
+
